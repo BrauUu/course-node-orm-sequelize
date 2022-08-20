@@ -1,8 +1,8 @@
-import 'dotenv/config'
-import Express from "express";
-import bodyParser from "body-parser";
+require('dotenv/config');
+const express = require("express");
+const bodyParser = require("body-parser");
 
-const app = Express();
+const app = express();
 
 app.use(bodyParser.json())
 
@@ -16,7 +16,7 @@ app.get('/test', (req, res) => {
     res.status(200).send({msg: "Hi mom!"})
 })
 
-export default app;
+module.exports = app;
 
 
 
