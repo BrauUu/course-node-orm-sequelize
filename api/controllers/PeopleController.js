@@ -1,6 +1,5 @@
-const database = require('../models');
-
-class PessoaController {
+import database from '../models';
+export default class PessoaController {
 
     static async findAll(req, res) {
         try {
@@ -14,5 +13,3 @@ class PessoaController {
 
     }
 }
-
-module.exports = PessoaController;

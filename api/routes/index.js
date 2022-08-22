@@ -1,7 +1,7 @@
-require('dotenv/config');
-const express = require("express");
+import 'dotenv/config';
+import express from "express";
 
-module.exports = app => {
+export default app => {
     app.use(express.json());
 
     app.get('/people', (req, res) => {
