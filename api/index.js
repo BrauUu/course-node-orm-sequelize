@@ -1,23 +1,16 @@
 require('dotenv/config');
 const express = require("express");
-const bodyParser = require("body-parser");
+const routes = require("./routes");
 
 const app = express();
+routes(app);
 
-app.use(bodyParser.json())
-
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
-    console.log(`running on http://localhost:${port}`)
-})
-
-app.get('/test', (req, res) => {
-    res.status(200).send({msg: "Hi mom!"})
+    console.log(`running on http://localhost:${port}`);
 })
 
 module.exports = app;
-
-
 
 

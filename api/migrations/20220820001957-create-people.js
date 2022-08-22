@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nome: {
+      name: {
         type: Sequelize.STRING
       },
-      ativo: {
+      active: {
         type: Sequelize.BOOLEAN
       },
       email: {
