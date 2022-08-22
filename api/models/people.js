@@ -9,9 +9,10 @@ module.exports = (sequelize, DataTypes) => {
       
     }
   }
-  people.init({
-    nome: DataTypes.STRING,
-    ativo: DataTypes.BOOLEAN,
+
+  People.init({
+    name: DataTypes.STRING,
+    active: DataTypes.BOOLEAN,
     email: DataTypes.STRING,
     role: DataTypes.STRING
   }, {
