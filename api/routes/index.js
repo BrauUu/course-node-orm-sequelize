@@ -4,6 +4,5 @@ const peopleRoutes = require('./peopleRouter')
 
 module.exports = app => {
     app.use(express.json());
-    app.use(peopleRoutes)
-    
+    app.use('/people', peopleRoutes)
 };
