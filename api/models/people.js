@@ -4,7 +4,12 @@ module.exports = (sequelize, DataTypes) => {
   class People extends Model {
 
     static associate(models) {
-      
+      People.hasMany(models.Classes, {
+        foreignKey: "professorId"
+      })
+      People.hasMany(models.Enrollment, {
+        foreignKey: "studentId"
+      })
     }
   }
 
@@ -15,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     role: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'people',
+    modelName: 'People',
   });
   return People;
 };
