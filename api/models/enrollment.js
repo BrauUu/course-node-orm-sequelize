@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING
   }, {
     sequelize,
+    freezeTableName: true,
     modelName: 'Enrollment',
   });
   return Enrollment;
